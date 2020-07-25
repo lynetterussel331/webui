@@ -1,0 +1,22 @@
+{ "collections": [
+    { 
+        "name": "Contacts", 
+        "path": "memberContacts",
+        "fields": [
+            { "name": "memberUUID", "type": "radiobutton" },
+            { "name": "contactType", "caption": "Type" },
+            { "name": "value", "caption": "Value" }
+        ]
+    },
+    {
+        "name": "Relatives",
+        "path": "memberRelatives",
+        "fields": [
+            { "name": "memberUUID", "type": "radiobutton", "parent": { "name": "relativeUUID", "path": "relatives" } },
+            { "name": "firstName", "caption": "First Name" },
+            { "name": "middleName", "caption": "Middle Name" },
+            { "name": "lastName", "caption": "Last Name" },
+            { "name": "relationship", "caption": "Relationship" }
+        ]
+    }
+]}

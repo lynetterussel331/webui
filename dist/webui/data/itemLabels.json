@@ -1,0 +1,12 @@
+{
+    "items": [
+        {
+            "label": "Members",
+            "single": "Member"
+        },
+        {
+            "label": "Relatives",
+            "single": "Relative"
+        }
+    ]
+}

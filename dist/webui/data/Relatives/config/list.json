@@ -1,0 +1,8 @@
+{ "list": [
+    { "name": "uuid", "type": "radiobutton" },
+    { "name": "firstName", "caption": "First name", "filter": "multiSelect" },
+    { "name": "middleName", "caption": "Middle name", "filter": "multiSelect" },
+    { "name": "lastName", "caption": "Last name", "filter": "multiSelect" },
+    { "name": "gender", "caption": "Gender", "hasBadge": true, "filter": "dropdown" },
+    { "name": "occupation", "caption": "Occupation", "filter": "multiSelect" }
+]}

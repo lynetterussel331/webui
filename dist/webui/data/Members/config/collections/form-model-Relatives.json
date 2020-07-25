@@ -1,0 +1,30 @@
+[
+    {
+        "type": "SELECT",
+        "id": "relativeUUID",
+        "label": "Relative",
+        "required": true,
+        "options": [
+            { "label": "", "value": "" },
+            { "label": "Erlinda Salangsang Garcia", "value": "28676779-7d76-4dfd-b081-da79707d86b5" },
+            { "label": "Reynaldo David Garcia", "value": "dcabda30-1af0-45e2-971b-83265f57250f" }
+        ]
+    },
+    {
+        "type": "SELECT",
+        "id": "relationship",
+        "label": "Relationship",
+        "required": true,
+        "options": [
+            { "label": "", "value": "" },
+            { "label": "Spouse", "value": "Spouse" },
+            { "label": "Father", "value": "Father" },
+            { "label": "Mother", "value": "Mother" },
+            { "label": "Child", "value": "Child" },
+            { "label": "Brother", "value": "Brother" },
+            { "label": "Sister", "value": "Sister" },
+            { "label": "Guardian", "value": "Guardian" },
+            { "label": "Other", "value": "Other" }
+        ]
+    }
+]

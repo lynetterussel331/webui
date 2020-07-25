@@ -1,0 +1,7 @@
+{
+    "buttons": [
+        { "label": "New", "action": "create", "formSettings": { "caption": "Create" } },
+        { "label": "Edit", "action": "update", "formSettings": { "caption": "Update" }  },
+        { "label": "Delete", "action": "delete", "confirmMessage": "Are you sure you want to delete this record?" }
+    ]
+}
