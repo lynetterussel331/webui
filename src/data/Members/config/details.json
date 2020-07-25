@@ -1,0 +1,14 @@
+{ "details": [
+    { "name": "uuid" },
+    { "name": "firstName", "caption": "First name" },
+    { "name": "middleName", "caption": "Middle name" },
+    { "name": "lastName", "caption": "Last name" },
+    { "name": "birthdate", "caption": "Birthdate" },
+    { "name": "birthplace", "caption": "Birthplace" },
+    { "name": "gender", "caption": "Gender", "hasBadge": true },
+    { "name": "brgyRegVoter", "caption": "Brgy. Registered Voter", "hasBadge": true },
+    { "name": "occupation", "caption": "Occupation" },
+    { "name": "address", "caption": "Address" },
+    { "name": "addedDate", "caption": "Added Date" },
+    { "name": "modifiedDate", "caption": "Modified Date" }
+]}

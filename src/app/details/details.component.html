@@ -1,0 +1,24 @@
+<p-panel [header]="activeItem.label">
+    <div class="ui-g">
+        <div class="ui-g-6">
+            <app-buttons [activeItem]="activeItem" [type]="type" [uuid]="uuid" (reloadList)="reloadList($event)" ></app-buttons>
+            <p-table [value]="details" styleClass="ui-table-generic" >
+                <ng-template pTemplate="body" let-data>
+                    <tr>
+                        <td style="font-weight: 'bold';">{{ data.caption }}</td>
+                        <td>
+                            <div *ngIf="!data.hasBadge; then primary else badge"></div>
+                            <ng-template #primary>{{ data.value }}</ng-template>
+                            <ng-template #badge>
+                                <span [class]="'generic-badge value-' + data.value">{{ data.value }}</span>
+                            </ng-template>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        <div class="ui-g-6">
+            <app-collections [activeItem]="activeItem"></app-collections>
+        </div>
+    </div>
+</p-panel>

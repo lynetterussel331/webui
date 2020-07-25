@@ -1,0 +1,31 @@
+.login-wrap {
+    background-color: #f7f7f7;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    margin-top: 12%;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 10px;
+    border: solid 2px #007ad9;
+}
+
+h3 {
+    margin-top: 35px;
+    color: #007ad9;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+    width: 40%;
+}
+
+input {
+    border: 0px;
+    border-bottom: 1px solid #007ad9;
+    background-color: #f7f7f7;
+    margin-top: 20px;
+    height: 25px;
+}

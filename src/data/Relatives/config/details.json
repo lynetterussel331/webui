@@ -1,0 +1,9 @@
+{ "details": [
+    { "name": "UUID" },
+    { "name": "firstName", "caption": "First name" },
+    { "name": "middleName", "caption": "Middle name" },
+    { "name": "lastName", "caption": "Last name" },
+    { "name": "gender", "caption": "Gender" },
+    { "name": "occupation", "caption": "Occupation" },
+    { "name": "address", "caption": "Address" }
+]}

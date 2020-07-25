@@ -1,0 +1,63 @@
+<app-buttons [activeItem]="activeItem" [activeCollection]="activeCollection" [type]="type" [uuid]="uuid" (reloadList)="reloadList()" #buttonComponent></app-buttons>
+<p-table #dataTable [value]="list" [paginator]="true" [rows]="rows" [(selection)]="selectedRow" styleClass="ui-table-generic" [rowHover]="true"
+    [globalFilterFields]="globalFilterFields">
+    <ng-template *ngIf="type === 'list'" pTemplate="caption">
+        {{ activeItem ? activeItem.label : '' }} List
+        <div *ngIf="globalFilterFields" class="ui-table-globalfilter-container">
+            <input pInputType type="text" (input)="dataTable.filterGlobal($event.target.value, 'contains')" placeholder="Global Search">
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.name !== 'uuid' ? col.name : ''">
+                {{ col.caption }}
+                <p-sortIcon *ngIf="col.name !== 'uuid'" [field]="col.name"></p-sortIcon>
+            </th>
+        </tr>
+        <tr>
+            <th *ngFor="let col of columns">
+                <p-dropdown *ngIf="col.filter === 'dropdown'" [options]="distinctValuesMap[col.name]" (onChange)="dataTable.filter($event.value, col.name, 'equals')" 
+                    styleClass="ui-column-filter" [placeholder]="'Select a ' + col.caption" [showClear]="true">
+                    <ng-template let-option pTemplate="item">
+                        <span [class]="'generic-badge value-' + option.value">{{option.value}}</span>
+                    </ng-template>
+                </p-dropdown>
+                <p-multiSelect *ngIf="col.filter === 'multiSelect'" [options]="distinctValuesMap[col.name]" (onChange)="dataTable.filter($event.value, col.name, 'in')"
+                    placeholder="All" styleClass="ui-column-filter">
+                    <ng-template let-option pTemplate="item">
+                        <span>{{option.label}}</span>
+                    </ng-template>
+                </p-multiSelect>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-details>
+        <tr class="ui-selectable-row">
+            <td *ngFor="let col of columns" (dblclick)="redirectToDetails(details.uuid)">
+                <div [ngSwitch]="col.type">
+                    <div *ngSwitchCase="'button'">
+                        <button pButton type="button" class="ui-button-secondary" icon="pi pi-cog" (click)="redirectToDetails(details.uuid)"></button>
+                    </div>
+                    <div *ngSwitchCase="'radiobutton'">
+                        <p-radioButton name="uuid" [value]="details[col.name]" [(ngModel)]="uuid" (click)="buttonComponent.clickRadioButton(type, details)"></p-radioButton>
+                    </div>
+                    <div *ngSwitchDefault>
+                        <span class="ui-column-title">{{ col.caption }}</span>
+                        <div *ngIf="!col.hasBadge; then primary else badge"></div>
+                        <ng-template #primary>
+                            {{ details.mainDetails && details.mainDetails[col.name] ? details.mainDetails[col.name] : details[col.name] }}
+                        </ng-template>
+                        <ng-template #badge>
+                            <span [class]="'generic-badge value-' + details[col.name]">{{ details[col.name] }}</span>
+                        </ng-template>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td colspan="8" style="text-align:left">No records found.</td>
+        </tr>
+    </ng-template>
+</p-table>

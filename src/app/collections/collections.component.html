@@ -1,0 +1,2 @@
+<p-tabMenu #tabContainer [model]="collectionItems" [activeItem]="activeCollection" (click)="updateActiveCollection()"></p-tabMenu>
+<app-list [activeItem]="activeItem" [activeCollection]="activeCollection" [type]="type" [list]="list" [columns]="columns" (reloadListData)="updateListContents()"></app-list>

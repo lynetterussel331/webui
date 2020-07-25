@@ -1,0 +1,12 @@
+.ui-table-generic {
+    .ui-table-tbody > tr > td {
+        &:first-child {
+            text-align: right;
+        }
+    
+        &:last-child {
+            text-align: left;
+        }
+    }
+
+}

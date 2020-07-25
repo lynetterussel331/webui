@@ -1,0 +1,8 @@
+<p-tabMenu #tabContainer [model]="items" [activeItem]="activeItem" (click)="updateActiveItem()"></p-tabMenu>
+<div *ngIf="activeItem && activeItem.label === 'Home'; then homeBlock else listBlock"></div>
+<ng-template #homeBlock>
+    <app-home></app-home>
+</ng-template>
+<ng-template #listBlock>
+    <app-list [activeItem]="activeItem" [type]="type" [list]="list" [columns]="columns" (reloadListData)="updateListContents()"></app-list>
+</ng-template>

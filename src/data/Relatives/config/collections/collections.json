@@ -1,0 +1,11 @@
+{ "collections": [
+    {
+        "name": "Contacts",
+        "path": "relativeContacts",
+        "fields": [
+            { "name": "relativeUUID", "type": "radiobutton" },
+            { "name": "contactType", "caption": "Type" },
+            { "name": "value", "caption": "Value" }
+        ]
+    }
+]}

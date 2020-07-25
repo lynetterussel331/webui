@@ -1,0 +1,25 @@
+{
+    "buttons": [
+        { "label": "New" },
+        { "label": "Edit", "displayOnSelect": true },
+        { "label": "Delete", "displayOnSelect": true }
+    ],
+    "collections": [
+        {
+            "name": "Contacts",
+            "buttons": [
+                { "label": "New" },
+                { "label": "Edit", "displayOnSelect": true },
+                { "label": "Delete", "displayOnSelect": true }
+            ]
+        },
+        {
+            "name": "Relatives",
+            "buttons": [
+                { "label": "New" },
+                { "label": "Edit", "displayOnSelect": true },
+                { "label": "Delete", "displayOnSelect": true }
+            ]
+        }
+    ]
+}

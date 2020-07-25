@@ -1,0 +1,13 @@
+<div>
+    <p-toast key="errorMessage" position="top-center"></p-toast>
+    <div class="login-wrap">
+        <h3>Login to your account</h3>
+        <span>
+            <input type="text" pInputText [(ngModel)]="username" placeholder="Username" width="30" />
+        </span>
+        <span>
+            <input type="password" pInputText [(ngModel)]="password" placeholder="Password" width="30" />
+        </span>
+        <button pButton type="button" label="Sign In" (click)="login()"></button>
+    </div>
+</div>

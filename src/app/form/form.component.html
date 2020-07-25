@@ -1,0 +1,10 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+    <h3>{{ formHeader }}</h3>
+
+    <dynamic-primeng-form [group]="formGroup" [model]="formModel"></dynamic-primeng-form>
+    <div class="form-row">
+        <p-button class="submit-button" label="Submit" [disabled]="formGroup && !formGroup.valid"></p-button>
+    </div>
+
+</form>

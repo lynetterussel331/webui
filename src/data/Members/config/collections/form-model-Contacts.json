@@ -1,0 +1,20 @@
+[
+    {
+        "type": "SELECT",
+        "id": "type",
+        "label": "Type",
+        "required": true,
+        "options": [
+            { "label": "", "value": "" },
+            { "label": "EMAIL", "value": "EMAIL" },
+            { "label": "PHONE", "value": "PHONE" }
+        ]
+    },
+    {
+        "type": "INPUT",
+        "id": "value",
+        "label": "Value",
+        "maxLength": 30,
+        "placeholder": "Value"
+    }
+]
