@@ -27,6 +27,7 @@
     "@ng-dynamic-forms/ui-primeng": "^11.0.3",
     "@types/crypto-js": "^3.1.45",
     "crypto-js": "^4.0.0",
+    "express": "^4.17.1",
     "moment": "^2.26.0",
     "primeflex": "^1.0.0",
     "primeicons": "^2.0.0",
