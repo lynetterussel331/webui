@@ -1,7 +1,7 @@
 {
     "/api/*": {
         "target": "https://profiling-server.herokuapp.com",
-        "secure": false,
+        "secure": true,
         "changeOrigin": true
     }
 }
